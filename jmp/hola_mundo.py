@@ -4,6 +4,7 @@ print("Hola mundo")
 # * git commit -m "mensaje" es para hacer un commit
 # * git push es para subir los cambios al repositorio remoto
 # git status es para ver el estado de los archivos ** sirve para ver que paso sigue 
+# git branch es para ver en que rama estas y cuales hay. 
 # mkdir es para crear una carpeta
 # cd es para entrar a una carpeta
 # cd ../ es para regresar a la carpeta anterior

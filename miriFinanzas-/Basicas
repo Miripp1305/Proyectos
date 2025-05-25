@@ -1,0 +1,14 @@
+#Una computadora cuesta $18,500 pesos y te ofrecen un descuento del 18%.
+precio_original = 18500
+descuento = 18
+
+precio_final = precio_original *(1- descuento/100)
+print(precio_final)
+
+#Inviertes $10,000 pesos a una tasa del 8% anual durante 3 años:
+capital = 25000
+tasa = 0.12
+tiempo = 2
+
+interes = capital * tasa * tiempo
+print(interes)

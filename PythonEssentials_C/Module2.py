@@ -74,6 +74,12 @@ print("  *****   " *2)
 # The end and sep parameters can be used for formatting the output of the print() function. The sep parameter specifies the separator between the outputted arguments, e.g., print("H", "E", "L", "L", "O", sep="-"), whereas the end parameter specifies what to print at the end of the print statement.
 
 
+
+
+
+
+
+
 ######################2.2 Pythons Literals 
 
 #literals 
@@ -163,7 +169,7 @@ print(True < False)
 # "Python"
 print("\"I´m\"\n\"\"learning\"\"\n\"\"\"Python\"\"\"")
 
-#Notas del capitulo 
+######### Notas del capitulo 
 #Literals are notations for fixed values in code. Ej. a literal can be a number(123) or a string ("im a literal")
 #The binary system is a base-2 numeral system that uses only two symbols: 0 and 1.
 #The octal system is a base-8 numeral system that uses the digits 0 to 7.
@@ -172,4 +178,117 @@ print("\"I´m\"\n\"\"learning\"\"\n\"\"\"Python\"\"\"")
 #Floating point numbers (Floats) Are  numerical types. ej (3.14) o (-0.5)
 #Boolean values (Booleans) Are logical types. ej (True) o (False)
 #The None literal. Used to represent the absence of a value or a null value.
+
+
+
+
+
+
+
+
+
+##########################2.3 Operators - Data manipulation tools
+
+#Python as a calculator
+print(2+2)
+
+#Basic operators 
+# +
+# - 
+# * 
+# / 
+# // 
+# % 
+# **  
+
+#Exponentiation 
+print(2 ** 3)
+print(2 ** 3.)
+print(2. ** 3)
+print(2. ** 3.)
+
+#When both ** arguments are integers, the result is an integer.
+#When at least one ** argument is a float, the result is a float.
+
+#Multpilication 
+print(2 * 3)
+print(2 * 3.)
+print(2. * 3)
+print(2. * 3.)
+
+#Division 
+print(6 / 3)
+print(6 / 3.)
+print(6. / 3)
+print(6. / 3.)
+#Exception for the rule. 
+#The result by the division is always a float. 
+
+#Integer division (Floor division)
+print()
+print(5 // 3)
+print(6 // 3.)
+print(6. // 3)
+print(6. // 3.)
+#It differs from the normal division in 2 things:
+#1. The result is rounded down to the nearest integer. 
+#2. It conforms to the integer vs. float rule. 
+print()
+
+print(6 // 4)
+print(6. // 4)
+print()
+print(-6 // 4)
+print(6. // -4)
+#Rounding always goes to the lesser integer. 
+
+#Remainder (modulo)
+print()
+print(14 % 4)
+#remainder left after the integer division
+
+#Addiition 
+print()
+print(-4 + 4)
+print(-4. + 8)
+
+#Substraction 
+print()
+print(-4 - 4)
+print(4. - 8)
+print(-1.1)
+#It can also change the sign of a number.
+# the minus operator expects two arguments: 
+# the left (a minuend in arithmetical terms) and right (a subtrahend).
+
+#Operators and their priorities
+#Hierarchy of priorities. 
+#Bindings (enlaces). Determines the order of computation performed by some operators with equal priority.
+print()
+print(9 % 6 % 2)
+#Se tiene un enlace de izq a der. 
+
+print(2 ** 2 ** 3)
+#eL enlace es de der a izq. Por la exponenciacion.
+
+print(-3 ** 2) # -9
+print(-2 ** 3) # -8
+print(-(3 ** 2)) # -9
+
+print(2 * 3 % 5) # 1
+    
+#Operators and parentheses
+#Subexpressions in parentheses are always calculated first.
+print()
+print((5 * ((25 % 13) + 100) / (2 * 13)) // 2)
+    
+########### Notas del capitulo
+#An expression is a combination of values. (1+2)
+#Operators are special symbols or keywords whom perfor mathematical operations. (x * y)
+#Arithmetic operators in python: + addition, - substraction, * multiplication, / division, // integer division(rounded down to the nearest number), % modulo(remanente de division), ** exponentiation
+#An unary operator (-1) 
+#A binary operator (1+2)
+#Hierarchy of priorities. ** highest. 
+#Subexpression in parentheses are always calculated first.
+#The exponentiation operator (**) is right sided binding. From right to left.
 
