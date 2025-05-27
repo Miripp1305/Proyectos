@@ -292,3 +292,261 @@ print((5 * ((25 % 13) + 100) / (2 * 13)) // 2)
 #Subexpression in parentheses are always calculated first.
 #The exponentiation operator (**) is right sided binding. From right to left.
 
+
+
+
+
+
+
+######################## 2.4 - Variables 
+#The contect of these containers can be varied (almost) any way.
+#What does a variable has? A name; and a value.
+
+#Variable names #Rules:
+#1. A variable name can contain letters, digits, and underscores (_).
+#2. A variable name cannot start with a digit.  
+#3. A variable name cannot contain spaces.
+#4. A variable name cannot be a Python keyword.
+
+#How to create a variable
+#A variable comes into existence as a result of assigning a value to it. 
+#Will be automatically created when you assign a value to it.
+print()
+var = 1
+print(var)
+#Just name de desired varibale, then the equal sign, and then the value you want to put into the variable.
+
+#How to use a variable
+var = 1
+account_balance = 1000.0
+client_name = 'John Doe'
+print(var, account_balance, client_name)
+print(var)
+
+var = "3.8.5"
+print("Python version: " + var)
+#You can combine text and variables using the + operator.
+
+#How to assign a new value to an already existing variable
+#With the equal sign. Its an assignment operator. 
+#It assigns the value of its right to the left. 
+print()
+var = 1
+print(var)
+var = var + 1
+print(var)
+
+#Solving simple mathematical problems.
+#Pythagorean theorem
+#The square of the hypotenuse (c) is equal to the sum of the suares of the other two sides (a and b).
+print()
+a = 3.0
+b = 4.0
+c = (a ** 2 + b ** 2) ** 0.5
+print("c =", c)
+
+#LAB - Variables
+#Once upon a time in Appleland, John had three apples, Mary had five apples, and Adam had six apples. They were all very happy and lived for a long time. End of story.
+john = 3
+mary = 5
+adam = 6
+
+print (john, mary, adam, sep=",")
+
+total_apples = (john + mary + adam)
+print("Total number of apples:", total_apples)
+
+#Shortcut operators 
+#Use one and the same variable both to the right and left of the = operator.
+print()
+
+x= 5
+
+x = x * 2
+#sheep = sheep + 1
+
+x *= 2
+#sheep += 1
+#The above code is equivalent to the previous one, but it is shorter and easier to read.
+#Variable = variable op expression (x = x * 2)
+#variable op= expression (x *= 2)
+
+# i = i + 2 * j / i += 2 * j
+#var = var / 2   -  var /= 2
+#rem = rem % 10  / rem %= 10
+
+#### LAB VARIABLES - a simple converter
+
+#Bearing in mind that 1 mile is equal to approximately 1.61 kilometers, complete the program in the editor so that it converts:
+#miles to kilometers;
+#kilometers to miles.
+print()
+
+kilometers = 12.25
+miles = 7.38
+
+miles_to_kilometers = miles * 1.61
+kilometers_to_miles = kilometers / 1.61
+
+print(miles, "miles is", round(miles_to_kilometers, 2), "kilometers")
+print(kilometers, "kilometers is", round(kilometers_to_miles, 2), "miles")
+#round() is used to round the result to 2 decimal places.
+
+
+###### LAB Operators and expressions 
+#Complete the code in order to evaluate the following expression:
+#3x^3 - 2x^2 + 3x - 1
+print()
+x =  0
+x = float(x)
+y = 3 * x ** 3 - 2 * x ** 2 + 3 * x - 1 
+print("y =", y)
+
+x = 1 
+x = float(x)
+y = 3 * x ** 3 - 2 * x ** 2 + 3 * x - 1
+print("y =", y)
+
+x = -1
+x = float(x)
+y = 3 * x ** 3 - 2 * x ** 2 + 3 * x - 1
+print("y =", y)
+print()
+
+########## NOTAS DEL CAPITULO
+#A variable is a named location reserved to store values in the memory. Its created automatically when you assign a value to it.
+#Each variable must have a unique name (identifier). Beginning with a _ or a letter. And it cannot be a Python keyword.
+#Python is a dinaamically-typed language. Meaning you dont need to declare variables in it. Just =
+#Compound assignment operators (shortcut operators) ej. var += 1 o var /= 5 * 2
+#You can assign new values to already existing variables. for ej: 
+var = 2
+print(var)
+var = 3
+print(var)
+var += 1
+print(var)
+# You can combine text and variables using the + operator with the print() function. ej:
+print()
+var = "007"
+print("Agent " + var)
+
+
+
+
+
+
+
+
+
+######################### 2.5 - Comments
+#A remark inserted into the program, which is ommited at runtime.
+# This program evaluates the hypotenuse c.
+# a and b are the lengths of the legs.
+a = 3.0
+b = 4.0
+c = (a ** 2 + b ** 2) ** 0.5  # We use ** instead of a square root.
+print("c =", c)
+print()
+
+#Marking fragments of code 
+#Select the lines to modify into comments and press (Command + / )
+
+####LAB - Comments
+#this program computes the number of seconds in n number of hours
+hrs = 2 # number of hours
+s = 3600 # number of seconds in 1 hour
+print("Hours: ", hrs) 
+print("Seconds in hours: ", hrs * s) 
+print("Thanks for using! Goodbye :)")
+print()
+#this is the end of the program that computes the number of seconds in 2 hour
+
+################### NOTAS DEL CAPITULO
+#Comments can be used to leave additional information in code. Ommited at runtime. 
+#Piece of text that begins with a hash (#) symbol. 
+#You can use comments to mark a piece of code taht is not needed at the moment. 
+#Whenever possuble, give self-commenting names to variables. 
+#Comments make the program easier to read and understand.
+
+
+
+
+
+
+
+######################### 2.6 - Interaction with the user
+
+#The input() function.
+#The meaning of the function is to return a very usable result. 
+#The input() function is able to read data entered by the user and return the same data to the running program. 
+print("Tell me anything...")
+anything = input()
+print("Hmm...", anything, "... Really?")
+print()
+#The program prompts the user to imput some data. 
+#You need to assign the result to a variable; CRUCIAL. 
+
+#The input() function with an argument. 
+print()
+anything = input("Tell me anything...")
+print("Hmm...", anything, "...Really?")
+print()
+#The input function is invoked with one argument, its a string containing a message.
+
+#The result of the input() function.
+#is always a string. 
+#You mustn´t use it as and argument of any arithmetic operation.
+#    anything = input("Enter a number: ")
+#    something = anything ** 2
+#    print(anything, "to the power of 2 is", something)
+#IT WONT WORK.
+#The input() function - prohibited operations. 
+#You tried to apply the ** operator to str accompaniend with a float.
+
+#Type casting (type convesion)
+#Python offers 2 simple functions to sepcify data types. int() and float().
+#int() takes one argument and tries to convert it to an integer. ej. int(string) - int("123") = 123
+#float() takes one argument too but converts it to a float. ej. float(string) - float("123.45") = 123.45
+#You can invoke any of these by passing the input() results directly to them. 
+anything = float(input("Enter a number: "))
+something = anything ** 2.0
+print(anything, "to the power of 2 is", something)
+print()
+
+#More about input() and type casting 
+#Having a team consistinf of the trio - input(), int(), and float().
+leg_a = float(input("Input first leg length: "))
+leg_b = float(input("Input second leg length: "))
+hypo = (leg_a**2 + leg_b**2) ** .5
+print("Hypotenuse length is", hypo)
+print()
+#If you put negative values, la compu no se da cuenta del error. lo arreglamos mas adelante. 
+#la variable hypo solo se usa con la finalidad de save the result. 
+#Asi la podemos eliminar: 
+leg_a = float(input("Input first leg length: "))
+leg_b = float(input("Input second leg length: "))
+print("Hypotenuse length is", (leg_a**2 + leg_b**2) ** .5)
+print()
+
+#String operators
+#Regresamos a: + y *. They have a second function other than just arithmetic operations.
+#the plus sign (+), when applied to two strings, becomes a concetenation operator; 
+#Glues two strings into one. 
+#To use it correctly, both arguments must be strings. 
+fnam = input("May I have your first name, please? ")
+lnam = input("May I have your last name, please? ")
+print("Thank you.")
+print("\nYour name is " + fnam + " " + lnam + ".")
+print()
+#Replication operator (*)
+#The asterisk (*) when applied to a string and number becomes a replication operator. 
+"james" * 3 # "jamesjamesjames"
+3 * "miri" #"mirimirimiri"
+5 * "2" #"22222"
+#a number less than 0 prduces an empty string. 
+
+print("+" + 10 * "-" + "+")
+print(("|" + " " * 10 + "|\n") * 5, end="")
+print("+" + 10 * "-" + "+")
+
+
