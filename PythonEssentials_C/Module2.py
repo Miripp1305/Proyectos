@@ -521,7 +521,8 @@ hypo = (leg_a**2 + leg_b**2) ** .5
 print("Hypotenuse length is", hypo)
 print()
 #If you put negative values, la compu no se da cuenta del error. lo arreglamos mas adelante. 
-#la variable hypo solo se usa con la finalidad de save the result. 
+#la variable hypo solo se usa con 2
+#la finalidad de save the result. 
 #Asi la podemos eliminar: 
 leg_a = float(input("Input first leg length: "))
 leg_b = float(input("Input second leg length: "))
@@ -548,5 +549,97 @@ print()
 print("+" + 10 * "-" + "+")
 print(("|" + " " * 10 + "|\n") * 5, end="")
 print("+" + 10 * "-" + "+")
+print()
+
+#Type conversions once again. 
+#str() to turn a number to a string. 
+leg_a = float(input("Input first leg length: "))
+leg_b = float(input("Input second leg length: "))
+print("Hypotenuse length is " + str((leg_a**2 + leg_b**2) ** .5))
+print()
+#You can pass the whole result to the print function aas one string, forgetting about the commas. 
+
+####LAB - simple input and output
+#Complete the code in order to evaluate the results of four basic arithmetic operations on two numbers entered by the user.
+a = float(input("Inserte primer variable:")) # input a float value for variable a here
+b = float(input("Inserte segunda variable:")) # input a float value for variable b here
+
+print("la suma de", a , "más", b, "=", (a + b)) # output the result of addition here
+print("la resta de", a , "menos", b, "=", (a - b)) # output the result of subtraction here
+print("la multiplicacion de", a , "por", b, "=", (a * b)) # output the result of multiplication here
+print("la division de", a , "entre", b, "=", (a / b)) # output the result of division here
+
+print("\nThat's all, folks!")
+print()
+
+#####LAB operators and expressions
+x = float(input("Enter value for x: "))
+
+y = (1 / (x + (1 / (x +(1 / (x + (1 / x))) ))))
+
+print("y =", y)
+print()
+
+######LAB operator and expressions 2.0
+
+#primer intento fallido
+#h = hour * 60
+#hr = h + mins 
+#final = dura + event
+#mn = final % 59
+#hr = final % 23
+# print(hr, ":", mn, sep='')
+
+# Segundo intento fallido (tmb con float)
+# event = (dura / 60)
+# h = (hour * 60)
+# t = (h + mins)
+# end = t + event
+# hrs = 23 % end
+# minutos = 59 % end
+# print(hrs, ":", minutos, sep='')
+
+#tercer intento!!! casiiiii, falta acomodar los minutos
+# hrs = dura // 60
+# minu = dura % 60
+# hours = hrs + hour
+# minutos = minu + mins
+# print (hours, ":", minutos, sep="")
+
+hour = int(input("Starting time (hours): "))
+mins = int(input("Starting time (minutes): "))
+dura = int(input("Event duration (minutes): "))
+
+total_mins=(hour * 60) + mins + dura    
+end_hour = (total_mins // 60) % 24
+end_mins = total_mins % 60
+print(end_hour, ":", end_mins, sep="")
+print()
+
+########## NOTAS DEL CAPITULO
+#The print function sends data to  the console. while the input gets data from the consoles. 
+#The input() function comes with an optional parameter, the prompt string. To write a message before the user input. 
+#When the input function is called, the program´s flow is stopped. 
+name = input("Enter your name: ")
+print("Hello, " + name + ". Nice to meet you!")
+print("\nPress Enter to end the program.")
+input()
+print("THE END.")
+print()
+#The result of an input() function is always a string. You can add to another string using + 
+num_1 = input("Enter the first number: ") # Enter 12
+num_2 = input("Enter the second number: ") # Enter 21
+print(num_1 + num_2) # the program returns 1221
+print()
+#You can also multiply a string by a number.
+my_input = input("Enter something: ") # Example input: hello
+print(my_input * 3) # Expected output: hellohellohello
+print()
+
+
+
+
+
+
 
 
