@@ -517,10 +517,297 @@ power = 1
 for expo in range(16):
     print("2 to the power of", expo, "is", power)
     power *= 2
+print()
 # The expo variable is used as a control variable for the loop, and indicates the current value of the exponent. 
 # The exponentiation itself is replaced by multiplying by 2.
 
 ############ LAB - Essentials of the "for" loop - counting mississippily
+#Your task is very simple here: write a program that uses a for loop to "count mississippily" to five.
+#  Having counted to five, the program should print to the screen the final message "Ready or not, here I come!"
+import time
+for i in range(1,6):
+    print(i, "Mississippi")
+    time.sleep(1)
+print("Ready or not! Ahi les voy")
+print()
+
+#The break and continue statements 
+# break - exits the loop immediately, and unconditionally end the loop´s operation; the program begins to execute the nearest instruction after the loop´s body.
+# continue - behaves as if the program has suddenly reached the end of the body; the next turn is started and the condition expression is tested immediately.
+# both keywords 
+
+# break - example
+print("The break instruction:")
+for i in range(1, 6):
+    if i == 3:
+        break
+    print("Inside the loop.", i)
+print("Outside the loop.")
+# continue - example
+print("\nThe continue instruction:")
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print("Inside the loop.", i)
+print("Outside the loop.")
+print()
+
+####### LAB the break statement- Stuck in a loop 
+# Design a program that uses a while loop and continuously asks the user to enter a word unless 
+# the user enters "chupacabra" as the secret exit word, in which case the message "You've successfully left the loop." should be printed to the screen, and the loop should terminate.
+
+word = input("Ingresa la palabra secreta:")
+
+import time
+
+while word != "chupacabra":
+    print ("oh oh, try again")
+    time.sleep(1)
+    word = input("Ingresa nuevamente la palabra secreta:")
+    if word == "chupacabra":
+         break
+print ("Si es!! Has logrado salir del bucle")
+print()
+
+######### LAB the continue statement - The Ugly Vowel Eater
+# Your task here is very special: you must design a vowel eater! Write a program that uses:
+# a for loop;
+# the concept of conditional execution (if-elif-else)
+# the continue statement.
+
+user_word = input("Ingresa una palabra:")
+user_word = user_word.upper()
+
+for letter in user_word:
+    if letter == "A" :
+        continue
+    elif letter == "E":
+        continue
+    elif letter == "I":
+        continue
+    elif letter == "O":
+        continue
+    elif letter == "U":
+        continue
+    else:
+        print(letter)
+
+### OTRA MANERA
+# for letter in user_word:
+#     if letter in "AEIOU":
+#         continue
+#     print(letter)
+
+
+########### LAB The continue statment - the Pretty Vowel Eater
+word_ = ""
+
+uword = input("Ingresa una palabra:")
+uword = uword.upper()
+
+for letter in uword:
+    if letter == "A" :
+        continue
+    elif letter == "E":
+        continue
+    elif letter == "I":
+        continue
+    elif letter == "O":
+        continue
+    elif letter == "U":
+        continue
+    else:
+        word_ += letter
+print(word_)
+print()
+# The while loop and the else branch 
+# Loops may end in the else branch too: 
+i = 1
+while i < 5:
+    print(i)
+    i += 1
+else:
+    print("else:", i)
+
+print()
+
+# The for loop and the else branch 
+# "for" loops behave a bit differently:
+for i in range(5):
+    print(i)
+else:
+    print("else:", i)
+print()
+# The i variable retains its last value. 
+
+i = 111
+for i in range(2, 1):
+    print(i)
+else:
+    print("else:", i)
+print()
+# In this example the body wont be executed at all. 
+# When the body isnt excuted, the control variable (i =111) retains the value it had before. 
+
+
+############ LAB Essentials of the while loop 
+# Their pyramid is a bit weird, as it is actually a pyramid-shaped wall – it's flat. 
+# The pyramid is stacked according to one simple principle: each lower layer contains one block more than the layer above.
+# Your task is to write a program which reads the number of blocks the builders have, and outputs the height of the pyramid that can be built using these blocks.
+
+blocks = int(input("Enter the number of blocks: "))
+
+height = 0
+layer = 1
+
+while blocks >= layer:
+    blocks -= layer
+    height += 1
+    layer += 1
+print("The height of the pyramid:", height)
+print()
+
+####### LAB - Collatz´s hypothesis
+# In 1937, a German mathematician named Lothar Collatz formulated an intriguing hypothesis (it still remains unproven) which can be described in the following way:
+# take any non-negative and non-zero integer number and name it c0;
+# if it's even, evaluate a new c0 as c0 ÷ 2;
+# otherwise, if it's odd, evaluate a new c0 as 3 × c0 + 1;
+# if c0 ≠ 1, go back to point 2.
+# The hypothesis says that regardless of the initial value of c0, it will always go to 1.
+
+num = int(input("Ingresa un numero:"))
+steps = 0 
+
+while num != 1: 
+    print (num)
+    if num % 2 == 0:
+        num //= 2
+    else:
+        num = 3 * num + 1
+    steps += 1
+print (num)
+print ("steps :", steps)
+
+################# NOTAS DEL CAPITULO 
+# Two types of loops in Python: "while" and "for"
+# The while loop executes a statement or set of statements as long as a specified boolean condition is true.
+# Example 1
+
+#while True:
+    #print("Stuck in an infinite loop.")
+
+# Example 2
+counter = 5
+while counter > 2:
+    print(counter)
+    counter -= 1
+
+#The for loop executes a set of statements many times; it´s used to iterate over a sequence or other iterable objects. 
+#You can use the "for" loop to iterate over a sequence of numbers using the built-in "range" function.
+# Example 1
+word = "Python"
+for letter in word:
+    print(letter, end="*")
+print()
+
+# Example 2
+for i in range(1, 10):
+    if i % 2 == 0:
+        print(i)
+
+#You can use the "break" and "continue" statements to change the flow of a loop; 
+# - you can use "break" to exit a loop:
+
+text = "OpenEDG Python Institute"
+for letter in text:
+    if letter == "P":
+        break
+    print(letter, end="")
+
+# You can use "continue" to skip the current iteration, and continue with the next iteration. 
+
+text = "pyxpyxpyx"
+for letter in text:
+    if letter == "x":
+        continue
+    print(letter, end="")
+
+# The "while" and "for" loop can also have an "else" clause in Python. 
+# The "else" clause executes after the loop finishes its execution as long as it has not been terminated by "break": 
+n = 0
+while n != 3:
+    print(n)
+    n += 1
+else:
+    print(n, "else")
+print()
+
+for i in range(0, 3):
+    print(i)
+else:
+    print(i, "else")
+
+# The range() function generates a sequence of numbers. Its accepts integers and returns range objects. 
+# the syntax of range() looks as follows: 
+# range(start, stop, step)
+# start is an optional parameter specifying the starting number of the sequence (0 by default)
+# stop is an optional parameter specifying the end of the sequence generated (its not included)
+# step is also an optional parameter specifying the difference between the numbers in the sequence (1 by default)
+
+for i in range(3):
+    print(i, end=" ")  # Outputs: 0 1 2
+
+for i in range(6, 1, -2):
+    print(i, end=" ")  # Outputs: 6, 4, 2
+
+#### Section quiz 
+#Question 1: Create a for loop that counts from 0 to 10, and prints odd numbers to the screen. Use the skeleton below:
+#for i in range(1, 11):
+    # Line of code.
+        # Line of code.
+
+for i in range(1, 11):
+    if i % 2 != 0:
+        print(i)
+
+
+#Question 2: Create a while loop that counts from 0 to 10, and prints odd numbers to the screen. Use the skeleton below:
+#x = 1
+#while x < 11:
+    # Line of code.
+        # Line of code.
+    # Line of code.
+
+x = 1
+while x < 11:
+    if x % 2 != 0:
+        print (x)
+    x += 1
+
+# Question 3: Create a program with a for loop and a break statement. The program should iterate over characters in an email address, exit the loop when it reaches the @ symbol, and print the part before @ on one line. Use the skeleton below:
+#for ch in "john.smith@pythoninstitute.org":
+    #if ch == "@":
+        # Line of code.
+    # Line of code.
+
+for ch in "john.smith@pythoninstitute.org":
+    if ch == "@":
+        break
+    print(ch, end="")
+ 
+#Question 4: Create a program with a for loop and a continue statement. The program should iterate over a string of digits, replace each 0 with x, and print the modified string to the screen. Use the skeleton below:
+
+#for digit in "0165031806510":
+    #if digit == "0":
+        # Line of code.
+        # Line of code.
+    # Line of code.
+
+for digit in "0165031806510":
+    if digit == "0":
+        print("x", end="")
+        continue
+    print(digit, end="")
 
 
 
